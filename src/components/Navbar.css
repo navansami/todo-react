@@ -1,0 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+nav {
+  padding: 0.5rem 1.5rem;
+  color: aliceblue;
+  background-color: blueviolet;
+}
