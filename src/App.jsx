@@ -7,9 +7,15 @@ import TaskList from './components/TaskList';
 const App = () => {
 
   const [tasks, setTasks] = useState([]);
+  const [taskCompleted, setTaskCompleted] = useState([]);
 
   const onTaskAdded = (text) => {
       setTasks([...tasks, text]);
+  }
+
+  const onTaskCompleted = (taskDetail) => {
+    setTaskCompleted([...taskCompleted, taskDetail]);
+    setTasks(tasks.filter(task => task !== taskDetail ))
   }
 
   return (
@@ -17,7 +23,7 @@ const App = () => {
       <Navbar />
       <div className="bodyApp">
         <AddTask onTaskAdded={onTaskAdded} />
-        <TaskList tasks={tasks} />
+        <TaskList tasks={tasks} onTaskCompleted={onTaskCompleted} />
       </div>
     </React.Fragment>
   );

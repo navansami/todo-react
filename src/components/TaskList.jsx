@@ -1,15 +1,13 @@
 import React from 'react';
 import TaskDetail from './TaskDetail';
 
-const TaskList = ({ tasks }) => {
+const TaskList = ({ tasks, onTaskCompleted }) => {
   const allTasks = tasks.map(task => {
-    return <TaskDetail key={task} task={task} />
+    return <TaskDetail key={task} task={task} onTaskCompleted={onTaskCompleted} />
   })
   return (
-    <div>
-      <ul>
+    <div style={{ marginTop: '10px' }} >
         { allTasks }
-      </ul>
     </div>
   )
 }

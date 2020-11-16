@@ -1,10 +1,18 @@
 import './TaskDetail.css';
 import React from 'react';
 
-const TaskDetail = ({ task }) => {
+const TaskDetail = ({ task, onTaskCompleted }) => {
+
+  const onBoxChecked = (taskRef) => {
+    onTaskCompleted(taskRef);
+  }
+
   return (
     <div className="item" >
-      <input type="checkbox" /> { task }
+      <input
+        type="checkbox" 
+        onChange={() => onBoxChecked(task)}   
+      /> { task }
     </div>
   )
 }

@@ -1,6 +1,5 @@
 .item {
-  display: flex;
-  justify-content: start;
+  display: flex-start;
   align-items: center;
   width: 100%;
   padding: 0 1rem;
