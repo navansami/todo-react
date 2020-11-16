@@ -1,3 +1,10 @@
 input {
   width: 100%;
+  border: none;
+  border-bottom: solid 1px teal;
+  padding: 0.4rem;
+}
+
+input:focus {
+  outline: none;
 }

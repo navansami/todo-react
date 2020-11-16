@@ -1,8 +1,9 @@
+import './TaskDetail.css';
 import React from 'react';
 
 const TaskDetail = ({ task }) => {
   return (
-    <div>
+    <div className="item" >
       <input type="checkbox" /> { task }
     </div>
   )

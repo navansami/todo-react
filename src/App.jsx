@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import AddTask from './AddTask';
+import AddTask from './components/AddTask';
 import TaskList from './components/TaskList';
 
 const App = () => {
