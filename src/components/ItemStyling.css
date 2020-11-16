@@ -5,6 +5,10 @@
   padding: 0 1rem;
 }
 
+.is-completed {
+  text-decoration: line-through;
+}
+
 input[type="checkbox"] {
   width: 10px;
   margin-right: 10px;

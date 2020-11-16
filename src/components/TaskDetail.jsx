@@ -1,4 +1,4 @@
-import './TaskDetail.css';
+import './ItemStyling.css';
 import React from 'react';
 
 const TaskDetail = ({ task, onTaskCompleted }) => {

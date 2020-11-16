@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import AddTask from './components/AddTask';
 import TaskList from './components/TaskList';
+import CompletedTaskList from './components/CompletedTasksList';
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
       <div className="bodyApp">
         <AddTask onTaskAdded={onTaskAdded} />
         <TaskList tasks={tasks} onTaskCompleted={onTaskCompleted} />
+        <CompletedTaskList taskCompleted={taskCompleted} />
       </div>
     </React.Fragment>
   );
