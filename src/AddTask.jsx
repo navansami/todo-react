@@ -6,6 +6,7 @@ const AddTask = (props) => {
   const onFormSubmitted = (e) => {
     e.preventDefault();
     props.onTaskAdded(text);
+    setText('');
   }
 
   return (

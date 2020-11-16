@@ -1,11 +1,12 @@
+import './App.css';
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import AddTask from './components/AddTask';
+import AddTask from './AddTask';
 import TaskList from './components/TaskList';
 
 const App = () => {
 
-  const [tasks, setTasks] = useState(['clean my room', 'complete this todo list']);
+  const [tasks, setTasks] = useState([]);
 
   const onTaskAdded = (text) => {
       setTasks([...tasks, text]);
@@ -14,8 +15,10 @@ const App = () => {
   return (
     <React.Fragment>
       <Navbar />
-      <AddTask onTaskAdded={onTaskAdded} />
-      <TaskList />
+      <div className="bodyApp">
+        <AddTask onTaskAdded={onTaskAdded} />
+        <TaskList tasks={tasks} />
+      </div>
     </React.Fragment>
   );
 }
