@@ -1,3 +1,4 @@
+import './AddTask.css';
 import React, { useState } from 'react';
 
 const AddTask = (props) => {
@@ -15,6 +16,7 @@ const AddTask = (props) => {
         <input 
           type="text"
           value={ text }
+          placeholder="Add a task"
           onChange={ (e) => setText(e.target.value) }
         />
       </form>
